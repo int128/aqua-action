@@ -1,9 +1,18 @@
-name: hello-world
-description: say Hello World
+name: aqua
+description: install packages using aqua
 inputs:
-  name:
-    description: example input
+  config:
+    description: path to config
     required: true
+    default: ${{ github.workspace }}/aqua.yaml
+  version:
+    description: aqua version
+    required: true
+    default: v0.5.4 # renovate: depName=suzuki-shunsuke/aqua
+  token:
+    description: GitHub token
+    required: true
+    default: ${{ github.token }}
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
