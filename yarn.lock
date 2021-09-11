@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@actions/cache@^1.0.7":
+"@actions/cache@1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@actions/cache/-/cache-1.0.7.tgz#d80b0f5ac1e1ad48a5e77c39685100bd49b56b1c"
   integrity sha512-MY69kxuubqUFq84pFlu8m6Poxl5sR/xyhpC4JEvno7Yg9ASYdGizEmKgt0m8ovewpYKf15UAOcSC0hzS+DuosA==
@@ -22,7 +22,7 @@
   resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.5.0.tgz#885b864700001a1b9a6fba247833a036e75ad9d3"
   integrity sha512-eDOLH1Nq9zh+PJlYLqEMkS/jLQxhksPNmUGNBHfa4G+tQmnIhzpctxmchETtVGyBOvXgOVVpYuE40+eS4cUnwQ==
 
-"@actions/exec@^1.0.0", "@actions/exec@^1.0.1", "@actions/exec@^1.1.0":
+"@actions/exec@1.1.0", "@actions/exec@^1.0.0", "@actions/exec@^1.0.1":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@actions/exec/-/exec-1.1.0.tgz#53441d968e56d2fec69ad3f15773d4d94e01162c"
   integrity sha512-LImpN9AY0J1R1mEYJjVJfSZWU4zYOlEcwSTgPve1rFQqK5AwrEs6uWW5Rv70gbDIQIAUwI86z6B+9mPK4w9Sbg==
@@ -44,12 +44,12 @@
   dependencies:
     tunnel "0.0.6"
 
-"@actions/io@^1.0.1", "@actions/io@^1.1.1":
+"@actions/io@1.1.1", "@actions/io@^1.0.1", "@actions/io@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@actions/io/-/io-1.1.1.tgz#4a157406309e212ab27ed3ae30e8c1d641686a66"
   integrity sha512-Qi4JoKXjmE0O67wAOH6y0n26QXhMKMFo7GD/4IXNVcrtLjUlGjGuVys6pQgwF3ArfGTQu0XpqaNr0YhED2RaRA==
 
-"@actions/tool-cache@^1.7.1":
+"@actions/tool-cache@1.7.1":
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/@actions/tool-cache/-/tool-cache-1.7.1.tgz#f9f4f822cb639da6facdf3e22ea571361ab26f92"
   integrity sha512-y1xxxOhXaBUIUit3lhepmu/0xdgiTMpnZRLmVdtF0hTm521doi+MdRRRP62czHvM7wxH6epj4JPNJQ3iJpOrkQ==
