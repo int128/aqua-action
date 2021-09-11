@@ -18,16 +18,15 @@ registries:
   ref: v0.4.2 # renovate: depName=suzuki-shunsuke/aqua-registry
 ```
 
-To run this action:
+To run this action,
 
 ```yaml
-jobs:
-  build:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: int128/aqua-action@v1
 ```
+
+This action saves the downloaded packages (`~/.aqua`) into cache and restores it next time.
 
 
 ## Inputs
@@ -36,10 +35,4 @@ jobs:
 |------|---------|------------
 | `config` | `${{ github.workspace }}/aqua.yaml` | path to config
 | `version` | see action.yaml | aqua version
-
-
-## Outputs
-
-| Name | Description
-|------|------------
-| `example` | example output
+| `token` | `${{ github.token }}` | GitHub token for aqua
