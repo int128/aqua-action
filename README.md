@@ -1,9 +1,22 @@
-# typescript-action [![ts](https://github.com/int128/typescript-action/actions/workflows/ts.yaml/badge.svg)](https://github.com/int128/typescript-action/actions/workflows/ts.yaml)
+# aqua-action [![ts](https://github.com/int128/aqua-action/actions/workflows/ts.yaml/badge.svg)](https://github.com/int128/aqua-action/actions/workflows/ts.yaml)
 
-This is a template of TypeScript Action.
+This is an action to install packages using https://github.com/suzuki-shunsuke/aqua.
 
 
 ## Getting Started
+
+Create `aqua.yaml` and add packages.
+
+```yaml
+packages:
+- name: suzuki-shunsuke/github-comment
+  registry: standard
+  version: v3.0.1 # renovate: depName=suzuki-shunsuke/github-comment
+
+registries:
+- type: standard
+  ref: v0.4.2 # renovate: depName=suzuki-shunsuke/aqua-registry
+```
 
 To run this action:
 
@@ -13,17 +26,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: int128/typescript-action@v1
-        with:
-          name: hello
+      - uses: int128/aqua-action@v1
 ```
 
 
 ## Inputs
 
 | Name | Default | Description
-|------|----------|------------
-| `name` | (required) | example input
+|------|---------|------------
+| `config` | `${{ github.workspace }}/aqua.yaml` | path to config
+| `version` | see action.yaml | aqua version
 
 
 ## Outputs
