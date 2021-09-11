@@ -11,5 +11,18 @@
       "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true
     }
-  ]
+  ],
+  regexManagers: [
+    {
+      fileMatch: [
+        "README.md",
+        "action.yaml",
+        "aqua.yaml",
+      ],
+      matchStrings: [
+        ": (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n",
+      ],
+      datasourceTemplate: "github-releases",
+    },
+  ],
 }
