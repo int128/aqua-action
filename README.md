@@ -11,7 +11,7 @@ Create `aqua.yaml` and add packages.
 packages:
 - name: suzuki-shunsuke/github-comment
   registry: standard
-  version: v3.0.1 # renovate: depName=suzuki-shunsuke/github-comment
+  version: v3.1.0 # renovate: depName=suzuki-shunsuke/github-comment
 
 registries:
 - type: standard
