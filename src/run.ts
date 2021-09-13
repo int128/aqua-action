@@ -15,7 +15,7 @@ type Inputs = {
 export const run = async (inputs: Inputs): Promise<void> => {
   const digest = await computeDigest(inputs.config)
   const aqua = aquaMetadata(inputs.version)
-  const cacheKey = `${aqua.cacheKey}-v1-${digest}`
+  const cacheKey = `${aqua.cacheKey}-v2-${digest}`
   core.info(`Cache key is ${cacheKey}`)
 
   const cacheMiss = await core.group(
@@ -23,7 +23,8 @@ export const run = async (inputs: Inputs): Promise<void> => {
     async () => (await cache.restoreCache(['~/.aqua'], cacheKey)) === undefined
   )
 
-  if (cacheMiss) {
+  core.addPath(`${os.homedir()}/.aqua/bin`)
+  if ((await io.which('aqua')) === '') {
     await core.group(`Install aqua`, async () => {
       core.info(`Download ${aqua.url}`)
       const downloaded = await tc.downloadTool(aqua.url)
@@ -34,7 +35,6 @@ export const run = async (inputs: Inputs): Promise<void> => {
     })
   }
 
-  core.addPath(`${os.homedir()}/.aqua/bin`)
   await exec.exec('aqua', ['-c', inputs.config, 'install'], {
     env: {
       ...process.env,
