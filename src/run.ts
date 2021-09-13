@@ -30,7 +30,7 @@ export const run = async (inputs: Inputs): Promise<void> => {
       const extracted = await tc.extractTar(downloaded)
       core.info(`Install from ${extracted}`)
       await io.mkdirP(`${os.homedir()}/.aqua/bin`)
-      await io.mv(`${extracted}/aqua`, `${os.homedir()}/.aqua/bin/aqua`)
+      await io.cp(`${extracted}/aqua`, `${os.homedir()}/.aqua/bin/aqua`)
     })
   }
 
