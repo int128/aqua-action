@@ -4,7 +4,7 @@ import * as exec from '@actions/exec'
 import * as io from '@actions/io'
 import * as tc from '@actions/tool-cache'
 import * as os from 'os'
-import { computeDigest } from './digest'
+import { computeCacheKeyForRelativePath, computeDigest } from './digest'
 
 type Inputs = {
   config: string
@@ -13,15 +13,23 @@ type Inputs = {
 }
 
 export const run = async (inputs: Inputs): Promise<void> => {
+  // use different cache between GitHub hosted runner and self hosted runner
+  // since @actions/cache creates an archive based on the workspace root
+  // https://github.com/actions/cache/issues/361
+  const cacheKeyForRelativePath = computeCacheKeyForRelativePath()
+
   const digest = await computeDigest(inputs.config)
   const aqua = aquaMetadata(inputs.version)
-  const cacheKey = `${aqua.cacheKey}-v2-${digest}`
+  const cacheKey = `${aqua.cacheKey}-v2-${digest}-${cacheKeyForRelativePath}`
   core.info(`Cache key is ${cacheKey}`)
 
-  const cacheMiss = await core.group(
-    'Restore cache',
-    async () => (await cache.restoreCache(['~/.aqua'], cacheKey)) === undefined
-  )
+  const cacheMiss = await core.group('Restore cache', async () => {
+    try {
+      return (await cache.restoreCache(['~/.aqua'], cacheKey)) === undefined
+    } catch (error) {
+      core.warning(`Could not restore cache: ${JSON.stringify(error)}`)
+    }
+  })
 
   core.addPath(`${os.homedir()}/.aqua/bin`)
   if ((await io.which('aqua')) === '') {
