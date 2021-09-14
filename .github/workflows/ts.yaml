@@ -7,7 +7,7 @@ on:
       - src/**
       - tests/**
       - '*.json'
-      - aqua.yaml
+      - '*.yaml'
       - .github/workflows/ts.yaml
   pull_request:
     branches: [main]
@@ -15,7 +15,7 @@ on:
       - src/**
       - tests/**
       - '*.json'
-      - aqua.yaml
+      - '*.yaml'
       - .github/workflows/ts.yaml
 
 jobs:
