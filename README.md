@@ -15,7 +15,7 @@ packages:
 
 registries:
 - type: standard
-  ref: v0.8.5 # renovate: depName=suzuki-shunsuke/aqua-registry
+  ref: v0.8.6 # renovate: depName=suzuki-shunsuke/aqua-registry
 ```
 
 To run this action,
