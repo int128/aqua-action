@@ -8,14 +8,12 @@ This is an action to install packages using https://github.com/suzuki-shunsuke/a
 Create `aqua.yaml` and add packages.
 
 ```yaml
-packages:
-- name: suzuki-shunsuke/github-comment
-  registry: standard
-  version: v3.1.0 # renovate: depName=suzuki-shunsuke/github-comment
-
 registries:
 - type: standard
-  ref: v0.9.4 # renovate: depName=suzuki-shunsuke/aqua-registry
+  ref: v0.10.0 # renovate: depName=suzuki-shunsuke/aqua-registry
+
+packages:
+- name: suzuki-shunsuke/github-comment@v4.0.0 # renovate: depName=suzuki-shunsuke/github-comment
 ```
 
 To run this action,
