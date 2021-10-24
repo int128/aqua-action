@@ -1,23 +1,14 @@
 {
   "extends": [
-    "config:base"
-  ],
-  "labels": [
-    "r:{{depName}}",
-    "r:{{depName}}/{{newVersion}}"
-  ],
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch", "pin"],
-      "automerge": true
-    }
+    "config:base",
+    "github>suzuki-shunsuke/aqua-renovate-config",
+    "github>int128/typescript-action-renovate-config"
   ],
   regexManagers: [
     {
       fileMatch: [
         "README.md",
         "action.yaml",
-        "aqua.yaml",
       ],
       matchStrings: [
         ": (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n",
