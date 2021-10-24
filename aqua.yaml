@@ -1,7 +1,5 @@
 packages:
-  - name: suzuki-shunsuke/github-comment
-    registry: standard
-    version: v3.1.0 # renovate: depName=suzuki-shunsuke/github-comment
+  - name: suzuki-shunsuke/github-comment@v3.1.0
 
 registries:
   - type: standard
