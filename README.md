@@ -10,7 +10,7 @@ Create `aqua.yaml` and add packages.
 ```yaml
 registries:
 - type: standard
-  ref: v0.10.8 # renovate: depName=suzuki-shunsuke/aqua-registry
+  ref: v0.10.10 # renovate: depName=suzuki-shunsuke/aqua-registry
 
 packages:
 - name: suzuki-shunsuke/github-comment@v4.0.0 # renovate: depName=suzuki-shunsuke/github-comment
