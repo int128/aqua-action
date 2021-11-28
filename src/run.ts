@@ -79,7 +79,7 @@ const aquaMetadata = (version: string): Metadata => {
     platform,
     arch,
     version,
-    url: `https://github.com/suzuki-shunsuke/aqua/releases/download/${version}/aqua_${platform}_${arch}.tar.gz`,
+    url: `https://github.com/aquaproj/aqua/releases/download/${version}/aqua_${platform}_${arch}.tar.gz`,
     cacheKey: `aqua-${version}-${platform}-${arch}`,
   }
 }
