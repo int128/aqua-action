@@ -8,7 +8,7 @@ inputs:
   version:
     description: aqua version
     required: true
-    default: v0.8.4 # renovate: depName=aquaproj/aqua
+    default: v0.8.5 # renovate: depName=aquaproj/aqua
   token:
     description: GitHub token
     required: true
