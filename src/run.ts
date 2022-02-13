@@ -47,6 +47,7 @@ export const run = async (inputs: Inputs): Promise<void> => {
     env: {
       ...process.env,
       GITHUB_TOKEN: inputs.token,
+      AQUA_ROOT_DIR: `${os.homedir()}/.aqua`,
     },
   })
 
