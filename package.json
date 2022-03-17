@@ -13,7 +13,7 @@
     "@actions/cache": "1.0.10",
     "@actions/core": "1.6.0",
     "@actions/exec": "1.1.1",
-    "@actions/io": "1.1.1",
+    "@actions/io": "1.1.2",
     "@actions/tool-cache": "1.7.1"
   },
   "devDependencies": {
