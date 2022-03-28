@@ -37,7 +37,4 @@ jobs:
       - uses: ./
       - run: find ~/.aqua
 
-      # https://github.com/suzuki-shunsuke/github-comment
-      - run: github-comment exec -- echo e2e-test passed
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: github-comment --version
