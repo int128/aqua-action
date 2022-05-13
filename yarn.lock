@@ -17,12 +17,12 @@
     semver "^6.1.0"
     uuid "^3.3.3"
 
-"@actions/core@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.8.1.tgz#3cdde366654b98764e63633a08dba6703131e274"
-  integrity sha512-LuFg2O/+rRrYxrdafnqH9mx6ADszKzQAhDuEhhMQIh47tsXzWkW4wXY5zvscqJ4KDywyJX0LA0pAESPLUjZXvw==
+"@actions/core@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-1.8.2.tgz#67539d669ae9b751430469e9ae4d83e0525973ac"
+  integrity sha512-FXcBL7nyik8K5ODeCKlxi+vts7torOkoDAKfeh61EAkAy1HAvwn9uVzZBY0f15YcQTcZZ2/iSGBFHEuioZWfDA==
   dependencies:
-    "@actions/http-client" "^2.0.0"
+    "@actions/http-client" "^2.0.1"
 
 "@actions/core@^1.2.6":
   version "1.5.0"
@@ -57,11 +57,6 @@
   integrity sha512-VRYHGQV1rqnROJqdMvGUbY/Kn8vriQe/F9HR2AlYHzmKuM/p3kjNuXhmdBfcVgsvRWTz5C5XW5xvndZrVBuAYg==
   dependencies:
     tunnel "0.0.6"
-
-"@actions/http-client@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-2.0.0.tgz#518c4af1e7045769d3e2ad8c2ce7f8b05224a9b3"
-  integrity sha512-fm1+OPPey5ypgStT9K8zbBhICj4J4UV/TJIHDhuWlkb8KyJaAtjcZK184dTqul0dV0nPKX97FNtDXX20BTLXSA==
 
 "@actions/http-client@^2.0.1":
   version "2.0.1"
