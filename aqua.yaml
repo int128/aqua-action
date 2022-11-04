@@ -3,4 +3,4 @@ packages:
 
 registries:
   - type: standard
-    ref: v3.86.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v3.87.0 # renovate: depName=aquaproj/aqua-registry
